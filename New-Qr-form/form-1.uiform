@@ -1,0 +1,77 @@
+﻿{
+  "Metadata": {
+    "Id": "761c2197-c739-475c-89e4-5ce3a78d7938",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "form-1",
+    "Theme": "Default",
+    "ShowInTaskbar": true,
+    "ShowMargin": true,
+    "CustomStyle": ""
+  },
+  "Data": {
+    "components": [
+      {
+        "label": "Name",
+        "placeholder": "Enter Your Name",
+        "tableView": true,
+        "key": "name",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Designation",
+        "placeholder": "Enter Your Designation",
+        "tableView": true,
+        "key": "designation",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Gender",
+        "widget": "choicesjs",
+        "tableView": true,
+        "multiple": true,
+        "data": {
+          "values": [
+            {
+              "label": "Male",
+              "value": "male"
+            },
+            {
+              "label": "Female",
+              "value": "female"
+            }
+          ]
+        },
+        "key": "gender",
+        "type": "select",
+        "input": true
+      },
+      {
+        "label": "Email",
+        "placeholder": "abc@xyz.com",
+        "tableView": true,
+        "key": "email",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Contact No.",
+        "tableView": true,
+        "key": "contactNo",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "type": "button",
+        "label": "Submit",
+        "key": "submit",
+        "disableOnInvalid": true,
+        "input": true,
+        "tableView": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+
+Weather-Bot
+Weather-Bot
+I created a project using UiPath Studio that automatically extracts a city's weather data and stores it in an Excel sheet. The project, referred to as "Weather-Bot," makes use of UiPath's browser activities to access a weather website or communicate with a weather API. Relevant weather information such as temperature, humidity, and wind speed are collected through careful website or API interaction utilizing actions like Get Text and Screen Scraping. Using UiPath's Write Cell or Write Range operations, the extracted data is then easily written to an Excel sheet. With headers and the appropriate cell formatting, the final Excel sheet may be easily structured and customized for better readability. The Weather-Bot project streamlines the process of retrieving and organizing weather information, saving time and effort in staying up to date with accurate weather conditions.

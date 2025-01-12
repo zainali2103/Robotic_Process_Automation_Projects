@@ -1,0 +1,226 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="store_2" this:store_2.in_product_name="Samsung S22" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_product_name" Type="InArgument(x:String)" />
+    <x:Property Name="name1" Type="OutArgument(x:String)" />
+    <x:Property Name="price1" Type="OutArgument(x:String)" />
+    <x:Property Name="ratings1" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>612,1591.3333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>store_2_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="store_2" sap:VirtualizedContainerService.HintSize="546,1526.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: New Tab" sap:VirtualizedContainerService.HintSize="484,1416" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="c9629210-cdee-4c80-ba7e-f8664432f227" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1196.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Address and search bar'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="c9629210-cdee-4c80-ba7e-f8664432f227" Text="www.flipkart.com[k(Enter)]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="224, 71, 1395, 36" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'Address and search bar'" FullSelectorArgument="&lt;ctrl name='New Tab - Google Chrome' role='pane' /&gt;&lt;ctrl name='Address and search bar' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='New Tab - Google Chrome' role='pane' /&gt;&lt;ctrl name='Address and search bar' role='editable text' automationid='' /&gt;" Guid="a68122b1-8fb6-4c07-9bc6-89411666e2a9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABXcAAAAoCAYAAAC1tsnqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAGMSURBVHhe7dzBCcJAEEBRS4nEQj15SdERQc2qBbgf3sKDZaaDf5jTcr7sAAAAAAC0iLsAAAAAAEFfcXd9GmcAAAAAAPzXb7s94u4i6gIAAAAATG3ouO+4+3ivPwAAAAAAMxJ3AQAAAADSxF0AAAAAgCBxFwAAAAAgSNwFAAAAAAgSdwEAAAAAgsRdAAAAAIAgcRcAAAAAIEjcBQAAAAAIEncBAAAAAILEXQAAAACAIHEXAAAAACBI3AUAAAAACBJ3AQAAAACCxF0AAAAAgCBxFwAAAAAgSNwFAAAAAAgSdwEAAAAAgsRdAAAAAIAgcRcAAAAAIEjcBQAAAAAIEncBAAAAAILEXQAAAACAIHEXAAAAACBI3AUAAAAACBJ3AQAAAACCxF0AAAAAgCBxFwAAAAAg6B13AQAAAADoEHcBAAAAAILEXQAAAACAoCHurh8LAAAAAABmc3TcI+4u4i4AAAAAwNSGjvt1luGxEHkBAAAAAOby227d3AUAAAAACDpdb9sOAAAAAEDJtt8Bfjm9jAwshn8AAAAASUVORK5CYII=" InformativeScreenshot="01602741d363e57698b8da61c595ee58.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='New Tab - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="176, 71, 48, 36" ElementType="Icon" FriendlyName="'graphic Search icon'" FullSelectorArgument="&lt;ctrl name='New Tab - Google Chrome' role='pane' /&gt;&lt;ctrl name='Search icon' role='graphic' /&gt;" FuzzySelectorArgument="&lt;ctrl name='New Tab - Google Chrome' role='pane' /&gt;&lt;ctrl name='Search icon' role='graphic' automationid='' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="c9629210-cdee-4c80-ba7e-f8664432f227" Text="[in_product_name + &quot;[k(Enter)]&quot;]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.flipkart.com/" CvTextArgument="Search for products, brands and more" CvType="Text" DesignTimeRectangle="421, 248, 476, 54" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='_3704LK' aaname='Search for products, brands and more' /&gt;" Guid="e4a97a0e-a00f-4bea-a611-637c2fbf751b" ImageBase64="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" InformativeScreenshot="8d16db3fd340ad458bcbed7ce35cfd17.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books &amp;amp; More. Best Offers!' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvType="Icon" DesignTimeRectangle="910, 261, 22, 22" ElementType="Icon" FriendlyName="'PATH'" FullSelectorArgument="&lt;webctrl idx='2' tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='path' class='_34RNph' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAAqSURBVEhL7c0xAQAwDASh+jf99cCQ6TDA25EiVsSKWBErYkWsiBWxo2j70n6GB26abOsAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NGetText DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="c9629210-cdee-4c80-ba7e-f8664432f227" TextString="[name1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.flipkart.com/search?q=Samsung+S22&amp;otracker=search&amp;otracker1=search&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off&amp;as-pos=1&amp;as-type=HISTORY" CvType="AnyWordGroup" DesignTimeRectangle="817, 502, 629, 27" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'SAMSUNG Galaxy'" FullSelectorArgument="&lt;webctrl parentid='container' tag='DIV' class='_1AtVbE col-12-12' isleaf='0' parentclass='_1YokD2 _3Mn1Gg' /&gt;&lt;webctrl aaname='SAMSUNG Galaxy S22 5G (Phantom Black, 256 GB)' parentid='container' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='container' tag='DIV' class='_1AtVbE col-12-12' isleaf='0' parentclass='_1YokD2 _3Mn1Gg' /&gt;&lt;webctrl parentid='container' tag='DIV' type='' class='_4rR01T' /&gt;" Guid="292e813f-85ef-4a7a-a0bf-85de272a2e22" InformativeScreenshot="1937642ce4f37ee926c8945544eee765.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Samsung S22- Buy Products Online at Best Price in India - All Categories | Flipkart.com' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvType="ArrowButton" DesignTimeRectangle="767, 505, 24, 27" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;div&amp;gt;div' idx='3' parentid='container' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='_2hVSre _3nq8ih' parentid='container' tag='DIV' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAfCAYAAAD0ma06AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAEvSURBVEhL7ZTLioQwEAD3/7/MgyB4EDwIHrwPKIj4ylLBsNG0ThKHmcNOQUPQ7q60JP6oN/MVvpx/LlyWRce6rmqe5+2pC+/IMflXiEIaUNg0jSrLUhVFodd93+vGBtZd1+l35JDLmtqzDTpCmjweD5WmqUqSxIm6rrdMpddSDrX0sDdn2AnZGVNITeyoqkqH9M6OcRy3zn84E/JppOKY4BMfcYRS4Z04shMOwyAW3Ql62nx2QsjzXCyMCc7DkZ3Q3D2pOCbodbyPzoRIsywTG4QEPaTL7winadKXVmoSEm3b+gmBKX0u9llQSw8JUWiI+QlIB8XmUsguQ04tuWeTGS6F4Cv1kcFTITyT+srASwg0lA4Sz0LwFhpsaagMgoWAKEYGUcI7fIUv581CpX4BixXdR5ukwQsAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '₹56,990'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="c9629210-cdee-4c80-ba7e-f8664432f227" TextString="[price1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.flipkart.com/search?q=samsung%20s22&amp;otracker=search&amp;otracker1=search&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off" CvType="AnyWordGroup" DesignTimeRectangle="1483, 568, 147, 38" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'₹56,990'" FullSelectorArgument="&lt;webctrl parentid='container' tag='DIV' class='_1AtVbE col-12-12' isleaf='0' parentclass='_1YokD2 _3Mn1Gg' /&gt;&lt;webctrl aaname='₹56,990' parentid='container' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='container' tag='DIV' class='_1AtVbE col-12-12' isleaf='0' parentclass='_1YokD2 _3Mn1Gg' /&gt;&lt;webctrl parentid='container' tag='DIV' type='' class='_30jeq3 _1_WHN1' /&gt;" Guid="17560eaa-525e-4913-ab19-b98d4624db38" InformativeScreenshot="92eae47e00dea099e1936fd1d3f3223d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Samsung S22- Buy Products Online at Best Price in India - All Categories | Flipkart.com' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArgument="Flipkart" CvType="Text" DesignTimeRectangle="287, 245, 117, 34" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IMG' type='' class='_2xm1JU' aaname='Flipkart' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Explore Plus'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="c9629210-cdee-4c80-ba7e-f8664432f227" TextString="[ratings1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.flipkart.com/search?q=samsung%20s22&amp;otracker=search&amp;otracker1=search&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off" CvType="AnyWordGroup" DesignTimeRectangle="817, 606, 59, 29" DesignTimeScaleFactor="1.5" FriendlyName="'4.3'" FullSelectorArgument="&lt;webctrl parentid='container' tag='DIV' class='_3pLy-c row' isleaf='0' parentclass='_1fQZEK' /&gt;&lt;webctrl aaname='4.3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='container' tag='DIV' class='_3pLy-c row' isleaf='0' parentclass='_1fQZEK' /&gt;&lt;webctrl tag='DIV' type='' class='_3LWZlK' /&gt;" Guid="19a00db6-bdac-4515-831f-023760efbb0a" InformativeScreenshot="2b3d43265f510b8c68d9f542e8e9bdef.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Samsung S22- Buy Products Online at Best Price in India - All Categories | Flipkart.com' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArgument="Explore Plus+" CvType="Text" DesignTimeRectangle="290, 278, 113, 23" ElementType="Text" FriendlyName="'Explore Plus'" FullSelectorArgument="&lt;webctrl aaname='Explore Plus' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Explore Plus' tag='A' type='' class='_21ljIi' check:innerText='Explore Plus' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NGetText>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1042" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="40856b9175a544e73848a39eb662ab00.png" Selector="&lt;html app='chrome.exe' title='New Tab' /&gt;" Title="New Tab" Url="chrome://newtab/" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
